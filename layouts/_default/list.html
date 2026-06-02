@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="cv-content">
+    <h1>{{ .Title }}</h1>
+    <div class="cv-body">
+        {{ .Content }}
+    </div>
+    
+    <!-- 如果有子页面，列出它们 -->
+    <ul>
+        {{ range .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</article>
+{{ end }}
