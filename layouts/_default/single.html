@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="cv-content">
+    <!-- 头部：姓名与一句话定位 -->
+    <header class="cv-header">
+        <h1>{{ .Title }}</h1>
+        <p class="cv-tagline">{{ .Params.tagline }}</p> <!-- 从 Markdown 头部读取 -->
+    </header>
+
+    <!-- 主体内容：Markdown 渲染出的 HTML 会放在这里 -->
+    <div class="cv-body">
+        {{ .Content }}
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="cv-footer">
+        <p>最后更新: {{ .Lastmod.Format "2006-01-02" }} | <a href="mailto:your@email.com">your@email.com</a></p>
+    </footer>
+</article>
+{{ end }}

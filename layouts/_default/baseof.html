@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <!-- 引入你的自定义 CSS，Hugo 会自动处理路径 -->
+    {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
+<body>
+    <main class="cv-container">
+        <!-- 这里会注入 single.html 的内容 -->
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    <!-- 打印/PDF 下载按钮 (仅在屏幕显示，打印时隐藏) -->
+    <button class="no-print download-btn" onclick="window.print()">📥 下载 PDF 简历</button>
+</body>
+</html>
