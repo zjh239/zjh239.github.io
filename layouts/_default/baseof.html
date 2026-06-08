@@ -9,12 +9,26 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </head>
 <body>
+    <nav class="top-nav">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+            {{ $isActive := false }}
+            {{ if eq $currentPage.RelPermalink .URL }}
+                {{ $isActive = true }}
+            {{ else if and (ne .URL "/") (hasPrefix $currentPage.RelPermalink .URL) }}
+                {{ $isActive = true }}
+            {{ end }}
+            <a href="{{ .URL }}" class="nav-link{{ if $isActive }} active{{ end }}">
+                {{ .Name }}
+            </a>
+        {{ end }}
+    </nav>
     <main class="cv-container">
         <!-- 这里会注入 single.html 的内容 -->
         {{ block "main" . }}{{ end }}
     </main>
     
     <!-- 打印/PDF 下载按钮 (仅在屏幕显示，打印时隐藏) -->
-    <button class="no-print download-btn" onclick="window.print()">📥 PDF</button>
+    <button class="no-print download-btn" onclick="window.print()">📥 Download CV</button>
 </body>
 </html>

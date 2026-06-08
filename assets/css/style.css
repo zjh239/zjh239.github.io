@@ -52,6 +52,54 @@ li { margin-bottom: 0.5rem; }
 a { color: var(--color-primary); text-decoration: none; border-bottom: 1px dotted var(--color-primary); }
 a:hover { border-bottom-style: solid; }
 
+/* 顶部导航栏基础样式 */
+.top-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    color: var(--color-text);
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+    background: transparent;
+    transform: translateY(-1px);
+}
+
+/* 当前激活的页面 */
+.nav-link.active {
+    border-bottom-color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* 主页按钮加粗 */
+.nav-link:first-child {
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
 /* 3. 打印/PDF 专属控制 (最接近 LaTeX 的体验！) */
 @media print {
     @page {

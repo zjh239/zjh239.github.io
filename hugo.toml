@@ -1,3 +1,20 @@
 baseURL = 'https://zjh239.github.io/'
 locale = 'en-us'
 title = 'Jiahui Zhang'
+[menu]
+[[menu.main]]
+    name = "Jiahui ZHANG"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 2
+[[menu.main]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 3
+[[menu.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 4
