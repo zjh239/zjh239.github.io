@@ -1,7 +1,7 @@
 /* 1. 全局变量 (类似 LaTeX 的 \newcommand)
    修改这里，全站样式一键更新 */
 :root {
-    --color-primary: #2563eb;       /* 主题色：专业蓝 */
+    --color-primary: #db8925;       /* 主题色：专业蓝 */
     --color-text: #334155;          /* 正文颜色：深灰，比纯黑更护眼 */
     --color-heading: #0f172a;       /* 标题颜色：近乎黑 */
     --color-bg: #ffffff;            /* 背景色 */
@@ -10,7 +10,7 @@
     --font-heading: "Merriweather", "Noto Serif SC", serif; /* 标题用衬线体，更有学术/专业感 */
     
     --spacing-base: 1.5rem;         /* 基础间距 */
-    --max-width: 800px;             /* 内容最大宽度，保证阅读体验 */
+    --max-width: 1000px;             /* 内容最大宽度，保证阅读体验 */
 }
 
 /* 2. 基础排版 (Typography) */
@@ -40,7 +40,7 @@ h1, h2, h3 {
     line-height: 1.3;
 }
 
-h1 { font-size: 2.0rem; border-bottom: 2px solid var(--color-primary); padding-bottom: 0.5rem; }
+h1 { font-size: 2.0rem; color: var(--color-primary); padding-bottom: 0.5rem; }
 h2 { font-size: 1.5rem; color: var(--color-primary); }
 
 /* 列表与段落优化 */
@@ -54,7 +54,6 @@ a:hover { border-bottom-style: solid; }
 
 /* 3. 打印/PDF 专属控制 (最接近 LaTeX 的体验！) */
 @media print {
-    /* 强制 A4 尺寸，精确到毫米的页边距 (类似 \usepackage[margin=2cm]{geometry}) */
     @page {
         size: A4 portrait;
         margin: 15mm 20mm 15mm 20mm; /* 上 右 下 左 */
