@@ -1,6 +1,5 @@
 +++
 date = '2026-06-08T16:14:50+03:00'
-title = 'Resume'
 +++
 
 # Jiahui ZHANG
