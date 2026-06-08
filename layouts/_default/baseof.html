@@ -29,6 +29,16 @@
     </main>
     
     <!-- 打印/PDF 下载按钮 (仅在屏幕显示，打印时隐藏) -->
-    <button class="no-print download-btn" onclick="window.print()">📥 Download CV</button>
+<!--     <button class="no-print download-btn" onclick="window.print()">📥 Download CV</button> -->
+    <button class="no-print download-btn" onclick="printResume()">📥 Download CV</button>
+    <script>
+    function printResume() {
+        // 打开 Resume 页面，并在新窗口中自动调用打印
+        const printWindow = window.open('/resume/', '_blank');
+        printWindow.onload = function() {
+            printWindow.print();
+        };
+    }
+    </script>
 </body>
 </html>

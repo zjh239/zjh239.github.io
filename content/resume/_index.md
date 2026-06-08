@@ -1,6 +1,5 @@
 +++
 date = '2026-06-08T16:14:50+03:00'
-draft = true
 title = 'Resume'
 +++
 
@@ -13,4 +12,3 @@ title = 'Resume'
 ## 研究经历
 - 2020-2025: 清华大学 AI 实验室
 
-[下载PDF版简历](/files/cv.pdf)

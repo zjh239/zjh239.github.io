@@ -1,6 +1,5 @@
 +++
 date = '2026-06-08T16:14:42+03:00'
-draft = true
 title = 'Publications'
 +++
 
