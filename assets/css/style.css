@@ -1,13 +1,13 @@
 /* 1. 全局变量 (类似 LaTeX 的 \newcommand)
    修改这里，全站样式一键更新 */
 :root {
-    --color-primary: #008b8c;       /* 主题色：专业蓝 */
+    --color-primary: #ff6b1a;       /* 主题色 */
     --color-text: #334155;          /* 正文颜色：深灰，比纯黑更护眼 */
     --color-heading: #0f172a;       /* 标题颜色：近乎黑 */
     --color-bg: #ffffff;            /* 背景色 */
 
     --font-heading: "Merriweather", "Noto Serif", serif; /* 标题用衬线体，更有学术/专业感 */
-    --font-body: "Noto Sans", "PingFang SC", -apple-system, sans-serif;
+    --font-body: Roboto, Helvetica, Arial,sans-serif, -apple-system;
 
     --spacing-base: 1.5rem;         /* 基础间距 */
     --max-width: 900px;             /* 内容最大宽度，保证阅读体验 */
@@ -106,6 +106,18 @@ a:hover { border-bottom-style: solid; }
     color: var(--color-primary);
 }
 
+.avatar {
+    max-width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    object-fit: cover;
+    float: left;           /* 图片浮动在左侧 */
+    margin-right: 3.5rem;  /* 图片右侧留白 */
+    margin-bottom: 1.5rem; /* 图片下方留白（当文字较短时） */
+
+}
+
+
 /* 3. 打印/PDF 专属控制 (最接近 LaTeX 的体验！) */
 @media print {
     @page {
@@ -153,3 +165,10 @@ a:hover { border-bottom-style: solid; }
     transition: transform 0.2s;
 }
 .download-btn:hover { transform: translateY(-2px); }
+
+/* Mobile mode: adjust download button position */
+@media (max-width: 768px) {
+    .download-btn {
+        top: 6rem;        /* Moves the button down from the default top position */
+    }
+}
