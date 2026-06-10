@@ -168,6 +168,10 @@ a:hover { border-bottom-style: solid; }
 
 /* Mobile mode: adjust download button position */
 @media (max-width: 768px) {
+    .avatar {
+        float: none;
+        margin: 0 auto 1rem auto;
+    }
     .download-btn {
         top: 6rem;        /* Moves the button down from the default top position */
     }
