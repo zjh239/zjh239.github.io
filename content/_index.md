@@ -1,11 +1,11 @@
 ---
-title: " Jiahui ZHANG"
+title: "Jiahui ZHANG"
 date: 2026-06-02
 ---
 
 ## About me
 
-My research mainly focuses on computational study of novel amorphous oxides. I use multi-scale simulation methods to investigate the forming and deformation process of amorphous aluminum oxide and gallium oxide. I also develope tools to characterize their room-temperature plasticity during the deformation. The final purpose is to find out why they have such an exceptional physical property and how to design novel glass materials, semiconductor materials with similar advantage. I'm always interested in coorporating with experimental guys, so that both of us might understand more of the nature.
+I'm a postdoc researcher in Tampere University, Finland. My research mainly focuses on computational study of novel amorphous oxides. I use multi-scale simulation methods to investigate the forming and deformation process of amorphous aluminum oxide and gallium oxide. I also develope tools to characterize their room-temperature plasticity during the deformation. The final purpose is to find out why they have such an exceptional physical property and how to design novel glass materials, semiconductor materials with similar advantage. I'm always interested in coorporating with experimental guys, so that both of us might understand more of the nature.
 
 ## News
 

@@ -1,13 +1,13 @@
 /* 1. 全局变量 (类似 LaTeX 的 \newcommand)
    修改这里，全站样式一键更新 */
 :root {
-    --color-primary: #ff6b1a;       /* 主题色 */
-    --color-text: #334155;          /* 正文颜色：深灰，比纯黑更护眼 */
-    --color-heading: #0f172a;       /* 标题颜色：近乎黑 */
+    --color-primary: #963f5e;       /* 主题色 */
+    --color-text: #334155;          /* 正文颜色 */
+    --color-heading: #0f172a;       /* 标题颜色 */
     --color-bg: #ffffff;            /* 背景色 */
 
-    --font-heading: "Merriweather", "Noto Serif", serif; /* 标题用衬线体，更有学术/专业感 */
-    --font-body: Roboto, Helvetica, Arial,sans-serif, -apple-system;
+    --font-heading: "Dejavu Serif", "Merriweather", Lora;
+    --font-body: Roboto, Helvetica, Arial, sans-serif, -apple-system;
 
     --spacing-base: 1.5rem;         /* 基础间距 */
     --max-width: 900px;             /* 内容最大宽度，保证阅读体验 */
