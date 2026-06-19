@@ -49,7 +49,7 @@ ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; }
 li { margin-bottom: 0.5rem; }
 
 /* 链接样式 */
-a { color: var(--color-primary); text-decoration: none; border-bottom: 1px dotted var(--color-primary); }
+a {color: var(--color-primary); text-decoration: none; border-bottom: 1px dashed var(--color-primary); }
 a:hover { border-bottom-style: solid; }
 
 .cv-body table {
@@ -66,25 +66,33 @@ a:hover { border-bottom-style: solid; }
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
-    padding: 0.8rem 1.5rem;
+    padding: 0.4rem 0.8rem;
     border-bottom: 1px solid var(--color-border);
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.nav-link {
+.nav-link,
+.lang-switch {
+    display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 0.8rem;
     transition: all 0.3s ease;
     font-family: var(--font-body);
     font-size: 0.95rem;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
     color: var(--color-text);
     background: transparent;
     border-bottom: 2px solid transparent;
     border-radius: 0;
+}
+
+.lang-switch {
+    margin-left: 0.3rem;
+    transform: translateY(6px);
 }
 
 .nav-link:hover {
@@ -148,22 +156,31 @@ a:hover { border-bottom-style: solid; }
 }
 
 /* 屏幕上的下载按钮样式 */
-.download-btn {
-    z-index: 1001;
+.download-group {
     position: fixed;
     top: 1.2rem;
     right: 2rem;
+    display: flex;
+    gap: 0.6rem;
+    z-index: 1001;
+}
+
+/* 按钮本身不再固定 */
+.download-group .download-btn {
     background: var(--color-primary);
     color: white;
     border: none;
-    padding: 0.4rem 0.6rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.2s;
+    white-space: nowrap;
+    font-family: var(--font-body);
 }
-.download-btn:hover { transform: translateY(-2px); }
+
+.download-group .download-btn:hover { transform: translateY(-2px); }
 
 /* Mobile mode: adjust download button position */
 @media (max-width: 768px) {
@@ -171,7 +188,7 @@ a:hover { border-bottom-style: solid; }
         float: none;
         margin: 0 auto 1rem auto;
     }
-    .download-btn {
+    .download-group {
         top: 6rem;        /* Moves the button down from the default top position */
     }
 }

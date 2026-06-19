@@ -1,0 +1,8 @@
+<!-- layouts/partials/lang-switch.html -->
+<nav class="lang-switch">
+    <ul>
+        {{ range .Translations }}
+            <li><a href="{{ .Permalink }}">{{ .Language.Label }}</a></li>
+        {{ end }}
+    </ul>
+</nav>

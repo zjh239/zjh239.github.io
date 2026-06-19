@@ -12,29 +12,28 @@
     <nav class="top-nav">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-            {{ $isActive := false }}
-            {{ if eq $currentPage.RelPermalink .URL }}
-                {{ $isActive = true }}
-            {{ else if and (ne .URL "/") (hasPrefix $currentPage.RelPermalink .URL) }}
-                {{ $isActive = true }}
-            {{ end }}
-            <a href="{{ .URL }}" class="nav-link{{ if $isActive }} active{{ end }}">
-                {{ .Name }}
-            </a>
+            {{ $isActive := $currentPage.IsMenuCurrent "main" . }}
+
+        <a href="{{ .URL }}" class="nav-link{{ if $isActive }} active{{ end }}">
+            {{ .Name }}
+        </a>
         {{ end }}
+        {{ partial "lang-switch.html" . }}
     </nav>
     <main class="cv-container">
         <!-- 这里会注入 single.html 的内容 -->
         {{ block "main" . }}{{ end }}
     </main>
     
-    <!-- 打印/PDF 下载按钮 (仅在屏幕显示，打印时隐藏) -->
-<!--     <button class="no-print download-btn" onclick="window.print()">📥 Download CV</button> -->
-    <button class="no-print download-btn" onclick="printResume()">📥 Download CV</button>
+    <div class="download-group no-print">
+        <button class="download-btn" onclick="printResume('en')">Print CV</button>
+        <button class="download-btn" onclick="printResume('zh')">打印简历</button>
+    </div>
+
     <script>
-    function printResume() {
-        // 打开 Resume 页面，并在新窗口中自动调用打印
-        const printWindow = window.open('/resume/', '_blank');
+    function printResume(lang) {
+        var url = (lang === 'zh') ? '/zh/resume/' : '/resume/';
+        var printWindow = window.open(url, '_blank');
         printWindow.onload = function() {
             printWindow.print();
         };

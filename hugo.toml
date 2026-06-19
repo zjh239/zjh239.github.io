@@ -1,16 +1,40 @@
 baseURL = 'https://zjh239.github.io/'
-locale = 'en-us'
-title = 'Jiahui Zhang'
-[menu]
-[[menu.main]]
-    name = "Jiahui ZHANG"
-    url = "/"
+defaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    title = "Jiahui ZHANG"
+    label = "English"
     weight = 1
-[[menu.main]]
-    name = "Publications"
-    url = "/publications/"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Jiahui ZHANG"
+        pageRef = "/"
+        weight = 1
+      [[languages.en.menu.main]]
+        name = "Publications"
+        pageRef = "/publications"
+        weight = 2
+      [[languages.en.menu.main]]
+        name = "Resume"
+        pageRef = "/resume"
+        weight = 3
+
+  [languages.zh]
+    title = "张家辉"
+    label = "中文"
     weight = 2
-[[menu.main]]
-    name = "Resume"
-    url = "/resume/"
-    weight = 3
+    contentDir = "content/zh"  # 关键：指定中文内容的根目录
+    [languages.zh.menu]
+      [[languages.zh.menu.main]]
+        name = "张家辉"
+        pageRef = "/"          # 相对于 contentDir 的路径
+        weight = 1
+      [[languages.zh.menu.main]]
+        name = "论文"
+        pageRef = "/publications"
+        weight = 2
+      [[languages.zh.menu.main]]
+        name = "简历"
+        pageRef = "/resume"
+        weight = 3
